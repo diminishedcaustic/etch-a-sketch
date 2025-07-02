@@ -1,4 +1,4 @@
-const sizeFactor = 104;
+const sizeFactor = 52;
 const changeSizeBtn = document.querySelector('#change-size-btn');
 const mainContent = document.querySelector('.main-content');
 
@@ -16,7 +16,10 @@ function addSquares() {
         let square = document.createElement('div');
         square.classList.add('square');
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = 'red';
+            let red = Math.random() * 256;
+            let green = Math.random() * 256;
+            let blue = Math.random() * 256;
+            square.style.backgroundColor = `rgb(${red},${green},${blue})`;
         });
         mainContent.append(square);
     }
